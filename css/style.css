@@ -1,1 +1,47 @@
+* {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #demo-main {
+    display: flex;
+    flex: 1;
+  }
+  #demo-main > .game {
+    flex: 1;
+  }
 
+  .game, iframe {
+    width: 830px;
+    height: 630px;
+    border: 1px solid black;
+    margin: 0 auto;
+    white-space: normal;
+    align-items: center;
+    justify-content: center;
+  }
+
+  iframe {
+    display: block;
+    border-style:none;
+  }
+
+  #demo-main > nav, 
+  #demo-main > aside {
+    flex: 0 0 20vw;
+    background: beige;
+  }
+  #demo-main > nav {
+    order: -1;
+  }
+  header, footer {
+    background: yellowgreen;
+    height: 20vh;
+  }
+  header, footer, .game, nav, aside {
+    padding: 1em;
+  }
