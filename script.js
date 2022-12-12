@@ -32,24 +32,29 @@ enemyInfo = {
 };
 
 var move = new Howl({
-    src: ['assets/move.mp3']
+    src: ['assets/move.mp3'],
+    volume: 0.1
 });
 
 var shootSound = new Howl({
-    src: ['assets/shoot.mp3']
+    src: ['assets/shoot.mp3'],
+    volume: 0.1
 });
 
 var explosionSound = new Howl({
-    src: ['assets/explosion.mp3']
+    src: ['assets/explosion.mp3'],
+    volume: 0.1
 });
 
 var saucerSound = new Howl({
     src: ['assets/saucer.mp3'],
-    loop: true
+    loop: true,
+    volume: 0.1
 });
 
 var music = new Howl({
-    src: ['assets/futurama.mp3']
+    src: ['assets/futurama.mp3'],
+    volume: 0.2
 });
 
 function preload() {
@@ -69,8 +74,10 @@ var ufoCount = 0;
 
 function create() {
     
-    this.add.image(400, 300, 'city');
- 
+    const bg = this.add.image(400, 300, 'city');
+    bg.scale = 0.5;
+
+  
     scene = this;
     cursors = scene.input.keyboard.createCursorKeys();
     keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
@@ -86,12 +93,12 @@ function create() {
     scene.physics.add.existing(saucerLava)
 
     shooter = scene.physics.add.sprite(400, 560, 'shooter');
+    shooter.tint = 0xFFF;
     shooter.setCollideWorldBounds(true)
 
     scoreText = scene.add.text(16, 16, "Score: " + score, { fontSize: '18px', fill: '#FFF' })
     livesText = scene.add.text(696, 16, "Lives: " + lives, { fontSize: '18px', fill: '#FFF' })
-    startText = scene.add.text(400, 300, "Click to Play!!!", { fontSize: '18px', fill: '#FFF' }).setOrigin(0.5)
-
+    startText = scene.add.text(440, 300, "Click to Play", { fontSize: '24px', fill: '#000' }).setOrigin(0.5)
     this.input.keyboard.on('keydown-SPACE', shoot);
 
     barriers.push(new Barrier(scene, 50, 450))
