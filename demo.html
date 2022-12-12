@@ -3,35 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Invaders!</title>
-    <title>Space Invaders</title>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
-    <script src="assets/howler.min.js"></script>
+    <title>Space Invaders: Futurama Style!: Demo</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+
     <header>
-        Space Invaders!
+        <div class = "title1">
+            <img src = "assets/spaveInvaders.png" alt = "Space Invaders">
+        </div>
+        <div class = "title2">
+            <img src = "assets/futuramaLogo.svg" alt = "Futurama">
+        </div>
     </header>
-    <div id = "demo-main">
-        <div class = "game">
+
+    <div id = "main">
+        <div class = "main-body">
+          <div class = "game">
             <iframe src = "game.html" title = "Space-Invaders"></iframe>
         </div>
-        <nav>
-            <nav role="navigation">
-                <h2>Menu:</h2>
-                <ul>
-                  <li><a href="index.html" title="Home of Space Invaders!">Homepage</a></li>
-                  <li><a href="story.html" title="Story of Space Invaders!">Story</a></li>
-                  <li><a href="demo.html" title="Demo of Space Invaders!">Demo</a></li>
-                  <li><a href="gallery.html" title="Gallery of Space Invaders!">Gallery</a></li>
-                  <li><a href="download.html" title="Download Space Invaders!">Download</a></li>
-                  <li><a href="about.html" title="About Space Invaders!">About Us</a></li>
-                </ul>
-              </nav>
+        </div>
+        <nav role = "navigation">
+            <h2 id = "navi">Menu</h2>
+            <ul class = "nav-bar">
+                <li><a href ="index.html" title="Home of Space Invaders!">Homepage</a></li>
+                <li><a href ="story.html" title="Story of Space Invaders!">Story</a></li>
+                <li><a class = "active" href="demo.html" title="Demo of Space Invaders!">Demo</a></li>
+                <li><a href ="gallery.html" title="Gallery of Space Invaders!">Gallery</a></li>
+                <li><a href ="download.html" title="Download Space Invaders!">Download</a></li>
+                <li><a href ="about.html" title="About Space Invaders!">About Us</a></li>
+            </ul>
+
         </nav>
-        <aside>Aside</aside>
     </div>
-    <footer>Footer</footer>
+
+    <footer role = "contentinfo">
+        <div>CSUN, Fall of 2022</div>
+        <div>
+            Comp Web ENGR 1: Final Project
+        </div>
+        
+        <div class = "github">
+          <a href="https://github.com/CrisNR/Space_Invaders" title="Github for Space Invaders" class = "github">Link to the Github</a>
+        </div>
+    </footer>
+
   </body>
 </html>
