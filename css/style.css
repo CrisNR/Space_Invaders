@@ -185,3 +185,51 @@ scroll due to overlowing content.*/
 .scroll-details {
   padding: 20px;
 }
+
+/*Align text for demo controls*/
+.game p{
+  text-align: center;
+}
+
+/*For download html*/
+.scroll-details .dlGame {
+  text-align: center;
+}
+
+.goodNews img {
+  width: 25%;
+  max-height: auto;
+}
+
+.goodNews {
+  text-align: center;
+}
+
+.downloadLink {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.downloadLink a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #008EA0FF;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: #1A5354FF;
+}
+
+/*For Gallery html*/
+.galleryP{
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
